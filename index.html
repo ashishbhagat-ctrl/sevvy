@@ -1,296 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Sevvy</title>
-<style>
-  :root {
-    --bg: #FAF7F5;
-    --ink: #4A4040;
-    --ink-soft: #6B6363;
-    --line: #E5DDD8;
-    --amber: #E8A33D;
-    --amber-soft: #F6E3C2;
-    --plum: #8B6F8C;
-    --card: #FFFFFF;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Sevvy</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap');
 
-  * { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html { scroll-behavior: smooth; }
+    :root {
+      --bg: #ffffff;
+      --surface: #f5f5f7;
+      --border: #e0e0e6;
+      --accent: #5b4fe0;
+      --accent-soft: rgba(91, 79, 224, 0.08);
+      --text: #111111;
+      --muted: #666670;
+      --heading-font: 'DM Serif Display', Georgia, serif;
+      --body-font: 'DM Sans', system-ui, sans-serif;
+    }
 
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body-font);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
 
-  .wrap {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 64px 24px 80px;
-  }
+    header {
+      padding: 48px 24px 40px;
+      max-width: 680px;
+      margin: 0 auto;
+      border-bottom: 1px solid var(--border);
+    }
 
-  /* ---- Header ---- */
-  .masthead {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 28px;
-  }
+    .app-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
 
-  .tiles {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 4px;
-    width: 34px;
-    height: 34px;
-    flex-shrink: 0;
-  }
+    h1 {
+      font-family: var(--heading-font);
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 400;
+      color: #111;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
 
-  .tiles span {
-    border-radius: 6px;
-    display: block;
-  }
+    .meta {
+      font-size: 13px;
+      color: var(--muted);
+    }
 
-  .tiles span:nth-child(1) { background: var(--amber); }
-  .tiles span:nth-child(2) { background: var(--plum); opacity: 0.85; }
-  .tiles span:nth-child(3) { background: var(--plum); opacity: 0.85; }
-  .tiles span:nth-child(4) { background: var(--amber); }
+    nav {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 32px 24px;
+      border-bottom: 1px solid var(--border);
+    }
 
-  .eyebrow {
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    font-weight: 600;
-  }
+    nav p {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
 
-  h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    margin: 0 0 6px;
-    color: var(--ink);
-  }
+    nav ol {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
 
-  .subline {
-    color: var(--ink-soft);
-    font-size: 14px;
-    margin: 0 0 36px;
-  }
+    nav ol li a {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 4px 10px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      display: inline-block;
+      transition: color 0.15s, border-color 0.15s;
+    }
 
-  .app-name {
-    font-weight: 600;
-    color: var(--ink);
-  }
+    nav ol li a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
 
-  /* ---- Table of contents ---- */
-  nav.toc {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 18px 20px;
-    margin-bottom: 44px;
-  }
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
 
-  nav.toc p {
-    margin: 0 0 10px;
-    font-size: 12px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    opacity: 1;
-    font-weight: 700;
-  }
+    section {
+      padding-top: 48px;
+    }
 
-  nav.toc ol {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px 16px;
-  }
+    h2 {
+      font-family: var(--heading-font);
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #111;
+      margin-bottom: 16px;
+    }
 
-  nav.toc li a {
-    font-size: 13.5px;
-    color: var(--ink);
-    text-decoration: none;
-    opacity: 0.8;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.15s ease, opacity 0.15s ease;
-  }
+    p {
+      color: #444;
+      margin-bottom: 12px;
+    }
 
-  nav.toc li a:hover,
-  nav.toc li a:focus-visible {
-    opacity: 1;
-    border-bottom-color: var(--amber);
-  }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-  /* ---- Sections ---- */
-  section {
-    padding: 26px 0 26px 20px;
-    border-left: 3px solid var(--line);
-    margin-bottom: 4px;
-    scroll-margin-top: 24px;
-  }
+    a:hover { text-decoration: underline; }
 
-  section:target {
-    border-left-color: var(--amber);
-  }
+    .highlight-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 8px;
+    }
 
-  h2 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin: 0 0 12px;
-    color: var(--ink);
-    letter-spacing: -0.005em;
-  }
+    .highlight-box p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+    }
 
-  p, li {
-    color: var(--ink);
-    opacity: 0.85;
-    font-size: 14.5px;
-    margin: 0 0 10px;
-  }
+    .contact-box {
+      margin-top: 16px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(91, 79, 224, 0.2);
+      border-radius: 6px;
+      padding: 16px 20px;
+      display: inline-block;
+    }
 
-  li { margin-bottom: 6px; }
+    .contact-box a {
+      font-weight: 500;
+    }
 
-  a.inline-link {
-    color: var(--plum);
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 1px solid currentColor;
-  }
-
-  a.inline-link:hover { color: var(--amber); }
-
-  .contact-card {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 16px 18px;
-    display: inline-block;
-  }
-
-  .contact-card a {
-    color: var(--ink);
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  .contact-card a:hover { color: var(--amber); }
-
-  /* ---- Footer ---- */
-  footer {
-    margin-top: 56px;
-    padding-top: 24px;
-    border-top: 1px solid var(--line);
-    font-size: 13px;
-    color: var(--ink-soft);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .last-updated {
-    font-size: 13px;
-    color: var(--ink-soft);
-    opacity: 1;
-  }
-
-  @media (max-width: 600px) {
-    .wrap { padding: 40px 18px 60px; }
-    h1 { font-size: 1.6rem; }
-    nav.toc ol { grid-template-columns: 1fr; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-  }
-</style>
+    footer {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
 </head>
 <body>
-  <div class="wrap">
 
-    <div class="masthead">
-      <div class="tiles" aria-hidden="true">
-        <span></span><span></span><span></span><span></span>
-      </div>
-      <span class="eyebrow">Sevvy · Legal</span>
-    </div>
-
+  <header>
+    <div class="app-label">Sevvy</div>
     <h1>Privacy Policy</h1>
-    <p class="subline">How <span class="app-name">Sevvy</span> handles information on your device.</p>
+    <p class="meta">Last updated: June 25, 2026</p>
+  </header>
 
-    <nav class="toc" aria-label="Table of contents">
-      <p>On this page</p>
-      <ol>
-        <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#data-we-collect">Data We Collect</a></li>
-        <li><a href="#no-account">No Account Required</a></li>
-        <li><a href="#third-party">Third-Party Services</a></li>
-        <li><a href="#children">Children's Privacy</a></li>
-        <li><a href="#security">Data Security</a></li>
-        <li><a href="#changes">Changes to This Policy</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ol>
-    </nav>
+  <nav>
+    <p>On this page</p>
+    <ol>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#data-we-collect">Data We Collect</a></li>
+      <li><a href="#no-account">No Account Required</a></li>
+      <li><a href="#third-party">Third-Party Services</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#security">Data Security</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <main>
 
     <section id="introduction">
       <h2>Introduction</h2>
-      <p>sevvy we is committed to protecting your privacy. This policy explains how we handle information when you use our mobile application ("sevvy").</p>
+      <p>Sevvy is committed to protecting your privacy. This policy explains how we handle information when you use our mobile application ("Sevvy").</p>
     </section>
 
     <section id="data-we-collect">
       <h2>Data We Collect</h2>
-      <p>We do not collect any personal information. The app stores only local gameplay data (game progress, scores, and settings) on your device using SharedPreferences. This data never leaves your device and is not transmitted to any server.</p>
+      <p>We do not collect any personal information. The app stores only local gameplay data (game progress, scores, and settings) on your device. This data never leaves your device and is not transmitted to any server.</p>
+      <div class="highlight-box">
+        <p>Nothing you do in Sevvy is sent to us. Your data stays on your device, always.</p>
+      </div>
     </section>
 
     <section id="no-account">
       <h2>No Account Required</h2>
-      <p>sevvy does not require you to create an account, sign in, or provide any personal information such as your name, email address, or phone number.</p>
+      <p>Sevvy does not require you to create an account, sign in, or provide any personal information such as your name, email address, or phone number.</p>
     </section>
 
     <section id="third-party">
       <h2>Third-Party Services</h2>
-      <p>sevvy uses Google AdMob to serve advertisements. AdMob may collect and use certain device information (such as advertising ID, IP address, and device type) to provide relevant ads. Please see Google's Privacy Policy for more details.</p>
+      <p>Sevvy uses Google AdMob to serve advertisements. AdMob may collect and use certain device information (such as advertising ID, IP address, and device type) to provide relevant ads. Where required by law, we collect your consent before personalized ads are shown.</p>
+      <p>Please see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> for more details.</p>
     </section>
 
     <section id="children">
       <h2>Children's Privacy</h2>
-      <p>Our app does not collect any personal information from anyone, including children under the age of 13. All data remains local to your device.</p>
+      <p>Sevvy does not collect any personal information from anyone, including children under the age of 13. All data remains local to your device.</p>
     </section>
 
     <section id="security">
       <h2>Data Security</h2>
-      <p>Since all data is stored locally on your device using SharedPreferences, the security of your data relies on your device's built-in protections. We recommend using your device's security features (PIN, password, or biometric lock).</p>
+      <p>Since all data is stored locally on your device, the security of your data relies on your device's built-in protections. We recommend using your device's security features (PIN, password, or biometric lock).</p>
     </section>
 
     <section id="changes">
       <h2>Changes to This Policy</h2>
-      <p>We may update this Privacy Policy from time to time. Changes will be posted within the app. Continued use of sevvy after changes constitutes acceptance of the updated policy.</p>
+      <p>We may update this Privacy Policy from time to time. Changes will be posted on this page. Continued use of Sevvy after changes constitutes acceptance of the updated policy.</p>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <p>For questions about this privacy policy, contact us at:</p>
-      <p>ashstudios2002@gmail.com</p>
+      <div class="contact-box">
+        <a href="mailto:ashstudios2002@gmail.com">ashstudios2002@gmail.com</a>
+      </div>
     </section>
 
-    <footer>
-      <span>© Sevvy</span>
-      <span class="last-updated">Last updated: June 22, 2026</span>
-    </footer>
+  </main>
 
-  </div>
+  <footer>
+    © 2026 Sevvy. All rights reserved.
+  </footer>
+
 </body>
 </html>
